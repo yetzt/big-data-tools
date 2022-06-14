@@ -16,6 +16,7 @@ module.exports = {
 	}, 16)
 */
 
+Array.prototype.forEachParallel = forEachParallel;
 function forEachParallel() {
 	let callback, maxParallel = os.cpus().length;
 	switch (arguments.length) {
