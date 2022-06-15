@@ -83,7 +83,7 @@ function simpleCluster() {
 
 	if (singleThread) return mainFunction(workerFunction);
 	
-	if (cluster.isMaster) {
+	if (cluster.isPrimary) {
 		mainFunction(function (...args) {
 			return new Promise(res => {
 				let worker = cluster.fork();
